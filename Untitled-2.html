@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>D3 JSON Data Fetch</title>
+    <!-- Include D3 library -->
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+</head>
+<body>
+    <script>
+        // Define the URL of the JSON file
+        const jsonURL = "https://2u-data-curriculum-team.s3.amazonaws.com/dataviz-classroom/v1.1/14-Interactive-Web-Visualizations/02-Homework/samples.json";
+
+        // Use D3 to fetch the JSON data
+        d3.json(jsonURL)
+            .then(data => {
+                // Handle the JSON data here
+                console.log(data);
+                // You can now work with the data as needed
+            })
+            .catch(error => {
+                console.error("Error loading JSON data:", error);
+            });
+    </script>
+</body>
+</html>
